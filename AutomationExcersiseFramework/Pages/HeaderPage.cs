@@ -12,6 +12,7 @@ namespace AutomationExcersiseFramework.Pages
         public By header = By.Id("header"); //nastavljamo na 15. da pišemo konstruktore za PageKlase
         public By loginLink = By.ClassName("fa-lock");
         public By deleteAcc = By.ClassName("fa-trash-o");
+        public By contactLink = By.ClassName("fa-envelope");
         public HeaderPage(IWebDriver driver) //u zagradama se prosledjuju ulazni parametar
         {
             this._driver = driver; //na 11 korak 
@@ -19,5 +20,7 @@ namespace AutomationExcersiseFramework.Pages
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(header)); //na13.
 
         }
+
+
     }
 }

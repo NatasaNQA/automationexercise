@@ -85,7 +85,6 @@ namespace AutomationExcersiseFramework.Steps
             Assert.True(ut.TextPresentInElement(message), "User did NOT get expected success message");
             ut.ClickOnElement(acp.countinueBtn);
 
-            
         }
         
     }
