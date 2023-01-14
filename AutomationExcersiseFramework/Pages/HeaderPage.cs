@@ -14,6 +14,7 @@ namespace AutomationExcersiseFramework.Pages
         public By deleteAcc = By.ClassName("fa-trash-o");
         public By contactLink = By.ClassName("fa-envelope");
         public By product = By.ClassName("material-icons");
+       
         public HeaderPage(IWebDriver driver) //u zagradama se prosledjuju ulazni parametar
         {
             this._driver = driver; //na 11 korak 

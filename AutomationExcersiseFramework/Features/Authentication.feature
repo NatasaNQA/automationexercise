@@ -18,3 +18,8 @@ Scenario: User can sign up
 		And submits the singup form
 	Then user will get 'Account Created!' success message
 		And user will be logged in
+
+Scenario: User can delete their account
+	Given user registers new account with 'Natasa' name
+	When user selects option for deleting the account
+	Then account will be deleted with 'ACCOUNT DELETED!' message
