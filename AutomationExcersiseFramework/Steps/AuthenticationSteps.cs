@@ -55,7 +55,7 @@ namespace AutomationExcersiseFramework.Steps
             ut.ClickOnElement(ap.signupBtn);
         }
 
-        [When(@"user fills in all required fields")]
+        [StepDefinition(@"user fills in all required fields")]
         public void WhenUserFillsInAllRequiredFields()
         {
             SignupPage sp = new SignupPage(Driver);
@@ -70,7 +70,7 @@ namespace AutomationExcersiseFramework.Steps
             ut.EnterTextInElement(sp.mobileNumber, TestConstants.Phone);
         }
 
-        [When(@"submits the singup form")]
+        [StepDefinition(@"submits the singup form")]
         public void WhenSubmitsTheSingupForm()
         {
             SignupPage sp = new SignupPage(Driver);
@@ -86,6 +86,34 @@ namespace AutomationExcersiseFramework.Steps
             ut.ClickOnElement(acp.countinueBtn);
 
         }
-        
+
+        [Given(@"user registers new account with '(.*)' name")]
+        public void GivenUserRegistersNewAccountWithName(string name)
+        {
+            GivenUserOpensSignInPage();
+            GivenEntersNameAndValidEmailAddress(name);
+            GivenUserClicksOnSignUpButton();
+            WhenUserFillsInAllRequiredFields();
+            WhenSubmitsTheSingupForm();
+            AccountCreatedPage acp = new AccountCreatedPage(Driver);
+            ut.ClickOnElement(acp.countinueBtn);
+        }
+
+        [When(@"user selects option for deleting the account")]
+        public void WhenUserSelectsOptionForDeletingTheAccount()
+        {
+            HeaderPage hp = new HeaderPage(Driver);
+            ut.ClickOnElement(hp.deleteAcc);
+        }
+
+        [Then(@"account will be deleted with '(.*)' message")]
+        public void ThenAccountWillBeDeletedWithMessage(string pageDeleted)
+        {
+            DeleteAccountPage dap = new DeleteAccountPage(Driver);
+            Assert.True(ut.TextPresentInElement(pageDeleted), "User did NOT delete the account");
+            ut.ClickOnElement(dap.continueDel);
+        }
+
+
     }
 }

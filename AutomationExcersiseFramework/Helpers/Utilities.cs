@@ -55,6 +55,13 @@ namespace AutomationExcersiseFramework.Helpers
             return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(headline)).Displayed;
         }
 
+        public string ReturnTextFromElement(By locator)
+        {
+            return _driver.FindElement(locator).GetAttribute("textContent");
+         // return _driver.FindElement(locator).Text; - može i ovaj način
+
+        }
+
     }
 
 }

@@ -22,7 +22,7 @@ namespace AutomationExcersiseFramework.Helpers
         }
 
         [AfterScenario] //radimo kompajliranje
-        public static void AfterScenatio()
+        public static void AfterScenario()
         {
             Driver.Quit(); //gasimo browser. Vracamo se na 10. liniju koda
         }

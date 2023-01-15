@@ -1,5 +1,6 @@
 *.suo
 *.testlog
+<<<<<<< HEAD
 *.manifest
 *.cache
 .vs/slnx.sqlite
@@ -10,4 +11,16 @@ AutomationExcersiseFramework/obj/project.assets.json
 AutomationExcersiseFramework/obj/Debug/netcoreapp3.1/AutomationExcersiseFramework.GeneratedMSBuildEditorConfig.editorconfig
 AutomationExcersiseFramework/obj/Release/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
 AutomationExcersiseFramework/obj/Release/netcoreapp3.1/AutomationExcersiseFramework.AssemblyInfo.cs
+=======
+.vs/slnx.sqlite
+.vs/AutomationExcersiseFramework/v16/TestStore/0/testlog.manifest
+.vs/automationexercise/v16/TestStore/0/testlog.manifest
+AutomationExcersiseFramework/obj/Debug/netcoreapp3.1/AutomationExcersiseFramework.assets.cache
+AutomationExcersiseFramework/obj/Debug/netcoreapp3.1/AutomationExcersiseFramework.csproj.AssemblyReference.cache
+AutomationExcersiseFramework/obj/Debug/netcoreapp3.1/AutomationExcersiseFramework.GeneratedMSBuildEditorConfig.editorconfig
+AutomationExcersiseFramework/obj/Release/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+AutomationExcersiseFramework/obj/Release/netcoreapp3.1/AutomationExcersiseFramework.AssemblyInfo.cs
+AutomationExcersiseFramework/obj/Release/netcoreapp3.1/AutomationExcersiseFramework.AssemblyInfoInputs.cache
+AutomationExcersiseFramework/obj/Release/netcoreapp3.1/AutomationExcersiseFramework.assets.cache
+>>>>>>> development
 AutomationExcersiseFramework/obj/Release/netcoreapp3.1/AutomationExcersiseFramework.GeneratedMSBuildEditorConfig.editorconfig
