@@ -26,14 +26,14 @@ namespace AutomationExcersiseFramework.Steps
             ut.EnterTextInElement(ap.loginPassword, TestConstants.Password);
         }
         
-        [When(@"user submits login form")]
+        [StepDefinition(@"user submits login form")]
         public void WhenUserSubmitsLoginForm()
         {
             AuthenticationPage ap = new AuthenticationPage(Driver);
             ut.ClickOnElement(ap.loginBtn);
         }
         
-        [Then(@"user will be logged in")]
+        [StepDefinition(@"user will be logged in")]
         public void ThenUserWillBeLoggedIn()
         {
             Assert.True(ut.EelementIsDispleyed(hp.deleteAcc), "User is NOT logged in");

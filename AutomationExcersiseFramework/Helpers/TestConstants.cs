@@ -24,7 +24,15 @@ namespace AutomationExcersiseFramework.Helpers
         public const string Subject = "Request";
         public const string Message = "Would you be able to remove all ads from your webside please?";
 
+        //comment
+        public const string comment = "Nice!";
         
+        //VisaCart data
+        public const string NameOnCard = "Natasa";
+        public const string CardNumber = "4111111111111111";
+        public const string CVC = "123";
+        public const string ExpirationMM = "06";
+        public const string ExpirationYY = "2023";
 
     }
 }
