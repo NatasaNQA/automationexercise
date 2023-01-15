@@ -13,6 +13,14 @@ namespace AutomationExcersiseFramework.Steps
         Utilities ut = new Utilities(Driver);
         HeaderPage hp = new HeaderPage(Driver);
 
+        private readonly ProductData productData;
+
+        public PDPSteps(ProductData productData)
+        {
+            this.productData = productData;
+        }
+
+
         [Given(@"user opens products page")]
         public void GivenUserOpensProductsPage()
         {
@@ -38,6 +46,7 @@ namespace AutomationExcersiseFramework.Steps
         public void WhenUserClicksOnAddToCartButton()
         {
             PDetailsP pdp = new PDetailsP(Driver);
+            productData.ProductName = ut.ReturnTextFromElement(pdp.prodName);
             ut.ClickOnElement(pdp.addToCart);
         }
         
@@ -48,11 +57,11 @@ namespace AutomationExcersiseFramework.Steps
             ut.ClickOnElement(pdp.viewCart);
         }
         
-        [Then(@"shopping cart will be displeyed with desired '(.*)' product inside")]
-        public void ThenShoppingCartWillBeDispleyedWithDesiredProductInside(string pageFound)
+        [Then(@"shopping cart will be displeyed with expected product inside")]
+        public void ThenShoppingCartWillBeDispleyedWithDesiredProductInside()
         {
-            CartPage cp = new CartPage(Driver);
-            Assert.True(ut.TextPresentInElement(pageFound), "Desired product is not in the cart!");
+            //CartPage cp = new CartPage(Driver);
+            Assert.True(ut.TextPresentInElement(productData.ProductName), "Desired product is not in the cart!");
         }
     }
 }

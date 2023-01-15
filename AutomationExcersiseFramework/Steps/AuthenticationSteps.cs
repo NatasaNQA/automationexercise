@@ -107,9 +107,11 @@ namespace AutomationExcersiseFramework.Steps
         }
 
         [Then(@"account will be deleted with '(.*)' message")]
-        public void ThenAccountWillBeDeletedWithMessage(string p0)
+        public void ThenAccountWillBeDeletedWithMessage(string pageDeleted)
         {
-            ScenarioContext.Current.Pending();
+            DeleteAccountPage dap = new DeleteAccountPage(Driver);
+            Assert.True(ut.TextPresentInElement(pageDeleted), "User did NOT delete the account");
+            ut.ClickOnElement(dap.continueDel);
         }
 
 

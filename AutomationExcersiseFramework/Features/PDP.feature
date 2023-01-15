@@ -10,4 +10,4 @@ Scenario: User can add product to cart
 		And opens first search result
 	When user clicks on Add to cart button
 		And proceeds to cart
-	Then shopping cart will be displeyed with desired 'Winter Top' product inside
+	Then shopping cart will be displeyed with expected product inside

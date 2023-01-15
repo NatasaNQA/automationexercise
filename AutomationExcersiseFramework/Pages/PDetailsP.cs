@@ -14,7 +14,7 @@ namespace AutomationExcersiseFramework.Pages
         public By addToCart = By.XPath("//*[@class='btn btn-default cart']//*[@class='fa fa-shopping-cart']");
         //public By viewCart = By.XPath("//*[@class='text-center']//*[contains(text(),'View Cart')]"); - radi i ovaj način, ali izbegavamo XPath
         public By viewCart = By.CssSelector(".text-center [href='/view_cart']");
-
+        public By prodName = By.XPath("//*[@class='product-information']//h2");
         public PDetailsP(IWebDriver driver)
         {
             this._driver = driver;

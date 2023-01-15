@@ -22,4 +22,4 @@ Scenario: User can sign up
 Scenario: User can delete their account
 	Given user registers new account with 'Natasa' name
 	When user selects option for deleting the account
-	Then account will be deleted with 'ACCOUNT DELETED!' message
+	Then account will be deleted with 'Account Deleted!' message
