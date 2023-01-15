@@ -2,3 +2,12 @@
 *.testlog
 *.manifest
 *.cache
+.vs/slnx.sqlite
+AutomationExcersiseFramework/bin/Debug/netcoreapp3.1/nunit_random_seed.tmp
+AutomationExcersiseFramework/obj/AutomationExcersiseFramework.csproj.nuget.dgspec.json
+AutomationExcersiseFramework/obj/AutomationExcersiseFramework.csproj.nuget.g.props
+AutomationExcersiseFramework/obj/project.assets.json
+AutomationExcersiseFramework/obj/Debug/netcoreapp3.1/AutomationExcersiseFramework.GeneratedMSBuildEditorConfig.editorconfig
+AutomationExcersiseFramework/obj/Release/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+AutomationExcersiseFramework/obj/Release/netcoreapp3.1/AutomationExcersiseFramework.AssemblyInfo.cs
+AutomationExcersiseFramework/obj/Release/netcoreapp3.1/AutomationExcersiseFramework.GeneratedMSBuildEditorConfig.editorconfig
