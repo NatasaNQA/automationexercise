@@ -13,7 +13,7 @@ namespace AutomationExcersiseFramework.Steps
         Utilities ut = new Utilities(Driver);
         HeaderPage hp = new HeaderPage(Driver);
 
-        private readonly ProductData productData;
+        private readonly ProductData productData; //ovo koristimo kada želimo da nešto upamtimo i to nešto kasnije proverimo, šta god to nešto bilo
 
         public PDPSteps(ProductData productData)
         {
@@ -60,10 +60,12 @@ namespace AutomationExcersiseFramework.Steps
         [Then(@"shopping cart will be displeyed with expected product inside")]
         public void ThenShoppingCartWillBeDispleyedWithDesiredProductInside()
         {
-            //CartPage cp = new CartPage(Driver);
+            //CartPage cp = new CartPage(Driver); //mislim da je ovaj korak višak
             Assert.True(ut.TextPresentInElement(productData.ProductName), "Desired product is not in the cart!");
         }
-        //-------------------------------------------------------
+       
+        
+        //--------------------Novi Scenario----------------------//
         
 
         [Given(@"adds product '(.*)' to cart")]

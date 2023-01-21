@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,8 @@ namespace AutomationExcersiseFramework.Pages
     {
         readonly IWebDriver _driver;
         public By cartPage = By.Id("cart_items");
-        public By proceedToCheckout = By.CssSelector(".col-sm-6 [class='btn btn-default check_out']");
+        //public By proceedToCheckout = By.CssSelector(".col-sm-6 [class='btn btn-default check_out']"); //radi
+        public By proceedToCheckout = By.CssSelector("[class='btn btn-default check_out']");
 
         public CartPage(IWebDriver driver)
         {
