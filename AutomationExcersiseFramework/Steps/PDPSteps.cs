@@ -125,6 +125,39 @@ namespace AutomationExcersiseFramework.Steps
             PaymentDone pd = new PaymentDone(Driver);
             Assert.True(ut.TextPresentInElement(done), "User did NOT confirmed the order");
         }
-        
+
+        //----------novi scenario------------------
+
+        [When(@"user enters correct credentials")]
+        public void WhenUserEntersCorrectCredentials()
+        {
+            PDetailsP pdp = new PDetailsP(Driver);
+            ut.EnterTextInElement(pdp.yourNameField, TestConstants.FirstName);
+            ut.EnterTextInElement(pdp.emailAdressField, TestConstants.Username);
+        }
+
+        [When(@"comment in the field below")]
+        public void WhenCommentInTheFieldBelow()
+        {
+            PDetailsP pdp = new PDetailsP(Driver);
+            ut.EnterTextInElement(pdp.addReviewField, TestConstants.comment);
+        }
+
+        [When(@"click on the Submit button")]
+        public void WhenClickOnTheSubmitButton()
+        {
+            PDetailsP pdp = new PDetailsP(Driver);
+            ut.ClickOnElement(pdp.submitButton);
+        }
+
+        [Then(@"user will get Thank you for your review. information\.")]
+        public void ThenUserWillGetInformation_(string p0)
+        {
+            PDetailsP pdp = new PDetailsP(Driver);
+            Assert.True(ut.EelementIsDispleyed(pdp.reviewMessage), "User is NOT review");
+        }
+
+
+
     }
 }

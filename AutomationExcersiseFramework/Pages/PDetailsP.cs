@@ -15,6 +15,11 @@ namespace AutomationExcersiseFramework.Pages
         //public By viewCart = By.XPath("//*[@class='text-center']//*[contains(text(),'View Cart')]"); //radi i ovaj način, ali izbegavamo XPath
         public By viewCart = By.CssSelector(".text-center [href='/view_cart']");
         public By prodName = By.XPath("//*[@class='product-information']//h2"); //tekst Blue Top
+        public By yourNameField = By.Id("name");
+        public By emailAdressField = By.Id("email");
+        public By addReviewField = By.Name("review");
+        public By submitButton = By.Id("button-review");
+        public By reviewMessage = By.CssSelector("//*[@class='form-row']//span");
         public PDetailsP(IWebDriver driver)
         {
             this._driver = driver;

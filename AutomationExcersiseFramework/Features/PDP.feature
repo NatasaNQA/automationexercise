@@ -24,3 +24,16 @@ Scenario: User can check out their order
 		And user submits payment form
 		And click on Pay and Confirm Order button
 	Then user will get 'Order Placed!' message 
+
+Scenario: User can submit a rewiev on any product
+	Given user opens sign in page 
+		And enters correct credentials
+		And user submits login form
+		And user will be logged in
+		And user opens products page
+		And searches for 'Winter Top' term
+		And opens first search result
+	When user enters correct credentials
+		And comment in the field below 
+		And click on the Submit button
+	Then user will get Thank you for your review. information.
